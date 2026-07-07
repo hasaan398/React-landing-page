@@ -1,5 +1,5 @@
 import React from "react";
-import "./FeaturesSection.css";
+import "./Featuressection.css";
 import Right from "../../assets/Right.png"; // apni image yahan rakho
 
 const avatars = [
