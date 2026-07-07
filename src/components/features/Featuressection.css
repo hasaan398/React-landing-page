@@ -1,0 +1,201 @@
+/* ============ FEATURES BLOCK ============ */
+.features-block {
+  background: #fff;
+  padding: 80px 20px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.features-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.features-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  position: relative;
+  color: #111827;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 3px;
+  background: #ff6b00;
+  border-radius: 2px;
+}
+
+.features-subtext {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  max-width: 420px;
+}
+
+.features-link {
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.features-link:hover {
+  text-decoration: underline;
+}
+
+/* Right side image */
+.features-right {
+  flex: 1;
+  min-width: 280px;
+  max-width: 560px;
+}
+
+.features-right img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============ JOIN A WORLD BLOCK ============ */
+.join-block {
+  position: relative;
+  background: #ffc93c;
+  padding: 90px 20px;
+  text-align: center;
+  overflow: hidden;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.join-content {
+  position: relative;
+  z-index: 2;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.join-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.join-subtext {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.join-btn {
+  padding: 14px 36px;
+  border: none;
+  border-radius: 6px;
+  background: #ff6b00;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.join-btn:hover {
+  background: #e65c00;
+}
+
+/* Decorative floating avatar icons */
+.join-icons {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.j-icon {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  border: 3px solid #fff;
+}
+
+.j-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.i1 { top: 12%; left: 8%; }
+.i2 { top: 20%; left: 42%; }
+.i3 { top: 15%; right: 10%; }
+.i4 { bottom: 18%; left: 12%; }
+.i5 { bottom: 22%; right: 15%; }
+.i6 { bottom: 10%; left: 48%; }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 992px) {
+  .features-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .features-subtext {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .features-right {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .features-block {
+    padding: 60px 16px;
+  }
+
+  .features-title,
+  .join-title {
+    font-size: 26px;
+  }
+
+  .features-right {
+    max-width: 320px;
+  }
+
+  .j-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .join-block {
+    padding: 60px 16px;
+  }
+
+  .join-icons {
+    display: none;
+  }
+}

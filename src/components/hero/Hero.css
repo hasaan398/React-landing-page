@@ -1,0 +1,177 @@
+.hero {
+  background: #f9fafb;
+  font-family: "Inter", sans-serif;
+
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-subtext {
+  font-size: 18px;
+  color: #6b7280;
+  max-width: 500px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border: none;
+}
+
+/* Sign Up button (orange) */
+.btn-signup {
+  background: #ff6b00;
+  border: none;
+  color: #fff;
+}
+
+.btn-signup:hover {
+  background: #e65c00;
+}
+
+/* Demo button (blue outline) */
+.btn-demo {
+  border: 1px solid #2563eb;
+  background: transparent;
+  color: #2563eb;
+}
+
+.btn-demo:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Trusted by section */
+.hero-trusted {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.trusted-text {
+  font-size: 13px;
+  color: #9ca3af;
+  line-height: 1.4;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.trusted-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.trusted-icons svg {
+  font-size: 22px;
+  color: #d1d5db;
+}
+
+/* Right side image */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-right img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 100px;
+}
+
+/* 📱 Responsive styles */
+@media (max-width: 992px) {
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left {
+    order: 1;
+  }
+
+  .hero-subtext {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-trusted {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-right {
+    order: 2;
+    margin-top: 40px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtext {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 40px 16px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-subtext {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,228 @@
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: Roboto;
+  overflow: visible;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  background: #ffffff;
+}
+.app-content { /* or body > main wrapper */
+  padding-top: 76px; /* set to your navbar height */
+}
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 32px;
+  display: block;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #444;
+  transition: color 0.3s ease;
+  font-weight: 550;
+  white-space: nowrap;
+}
+
+.navbar-links li a:hover {
+  color: #ff6b00;
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 18px;
+}
+
+.btn {
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Login button */
+.btn-login {
+  background: transparent;
+  border: none;
+  font-weight: 550;
+}
+
+.btn-login:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+/* Sign Up button */
+.btn-signup {
+  background-color: #ffffff;
+  border: 4px solid rgb(0, 0, 0);
+  color: #000000;
+  font-weight: 550;
+}
+
+.btn-signup:hover {
+  background: #e65c00;
+}
+
+/* ============ HAMBURGER BUTTON ============ */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #111827;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* ============ OVERLAY ============ */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 150;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ============ OFF-CANVAS DRAWER ============ */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  max-width: 80vw;
+  height: 100%;
+  background: #fff;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+  z-index: 200;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.mobile-drawer.open {
+  transform: translateX(0);
+}
+
+.mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.drawer-logo {
+  height: 28px;
+}
+
+.drawer-close-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #111827;
+  cursor: pointer;
+}
+
+.mobile-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.mobile-links li a {
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 550;
+  color: #111827;
+}
+
+.mobile-links li a:hover {
+  color: #ff6b00;
+}
+
+.mobile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 30px;
+  
+}
+
+.mobile-actions .btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 900px) {
+  .navbar-container {
+    padding: 16px 20px;
+  }
+
+  .navbar-links,
+  .navbar-actions {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+}
