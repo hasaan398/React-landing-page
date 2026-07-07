@@ -6,7 +6,7 @@ import Navbar from './components/navbar/Navbar'
 import Hero from './components/hero/Hero'
 import Tools from './components/tool/Tool'
 import AllInOne from './components/allinone/Allinone'
-import FeaturesSection from './components/features/FeaturesSection'
+import FeaturesSection from './components/features/Featuressection'
 import Footer from './components/footer/Footer'
 function App() {
   return (

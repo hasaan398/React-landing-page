@@ -3,7 +3,9 @@
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
 }
-
+body{
+    font-family: Roboto;
+}
 /* ============ ALL-IN-ONE BLOCK ============ */
 .aio-block {
   max-width: 1200px;
