@@ -42,7 +42,7 @@ function Footer() {
                     <a href="#">
                       {link}
                       {col.title === "Product" && link === "Accessibility" && (
-                        <span className="badge-new">NEW</span>
+                        <span className="badge-new">BETA</span>
                       )}
                     </a>
                   </li>

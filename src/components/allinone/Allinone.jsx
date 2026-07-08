@@ -5,9 +5,21 @@ import  Col from "../../assets/Col.png"; // apni image yahan rakho
 import { FaCheck, FaGlobeAmericas, FaGraduationCap, FaSmile, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const courses = [
-  { tag: "Featured", title: "The map of mathematics" },
-  { tag: "Popular", title: "Design for how people think" },
-  { tag: "New", title: "International & commercial law" },
+  {
+    tag: "Featured",
+    title: "The map of mathematics",
+    text: "Egestas elit ut purus feugiat pretium nibh ipsum consequat.",
+  },
+  {
+    tag: "Popular",
+    title: "Design for how people think",
+    text: "Aliquet ut euismod condimentum elementum ultrices volutpat sit non.",
+  },
+  {
+    tag: "New",
+    title: "International & commercial law",
+    text: "Molestie integer nulla arcu, mauris bibendum rhoncus dui.",
+  },
 ];
 
 const stats = [
@@ -103,10 +115,13 @@ function AllInOneSection() {
               <div className="course-card" key={index}>
                 <span className="course-tag">{course.tag}</span>
                 <p className="course-title">{course.title}</p>
+                <p className="course-text">{course.text}</p>
                 <button className="course-btn">Take Lesson</button>
               </div>
             ))}
           </div>
+
+          
         </div>
       </div>
 

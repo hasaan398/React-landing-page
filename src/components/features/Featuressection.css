@@ -1,7 +1,6 @@
 /* ============ FEATURES BLOCK ============ */
 .features-block {
   background: #fff;
-  padding: 80px 20px;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
@@ -21,8 +20,8 @@
 }
 
 .features-title {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 56px;
+  font-weight: 800;
   color: #111827;
   margin-bottom: 20px;
 }
@@ -44,16 +43,16 @@
 }
 
 .features-subtext {
-  font-size: 15px;
+  font-size: 20px;
   color: #6b7280;
-  line-height: 1.7;
+  line-height: 180%;
   margin-bottom: 24px;
-  max-width: 420px;
+ 
 }
 
 .features-link {
   color: #2563eb;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -88,13 +87,13 @@
 .join-content {
   position: relative;
   z-index: 2;
-  max-width: 550px;
+
   margin: 0 auto;
 }
 
 .join-title {
-  font-size: 34px;
-  font-weight: 700;
+  font-size: 56px;
+  font-weight: 800;
   color: #111827;
   margin-bottom: 16px;
 }

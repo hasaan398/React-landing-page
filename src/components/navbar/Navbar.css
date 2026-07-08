@@ -4,7 +4,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  font-family: Roboto;
+font-family: "Roboto", sans-serif;
   overflow: visible;
 }
 .navbar {
@@ -27,9 +27,11 @@ html, body {
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 40px;
-}
 
+}
+.nav-left .navbar-links{
+  margin-left: 60px;
+}
 .nav-right {
   display: flex;
   align-items: center;
@@ -37,7 +39,7 @@ html, body {
 }
 
 .navbar-container {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 20px 60px;
   display: flex;
@@ -53,9 +55,12 @@ html, body {
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 36px;
+  gap: 60px;
   margin: 0;
   padding: 0;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  gap: 12px 8px 12px 8px;
 }
 
 .navbar-links li a {
@@ -99,15 +104,20 @@ html, body {
 }
 
 /* Sign Up button */
-.btn-signup {
+.signup{
   background-color: #ffffff;
-  border: 4px solid rgb(0, 0, 0);
+  border: 2px solid black;
   color: #000000;
-  font-weight: 550;
+  font-weight: 500;
+  font-size: 18px;
+  padding-left: 18px;
+  padding-right: 16px;
+  border-radius: 5px;
+  line-height: 24px;
 }
 
-.btn-signup:hover {
-  background: #e65c00;
+.signup:hover {
+  background: #ff6b00;
 }
 
 /* ============ HAMBURGER BUTTON ============ */

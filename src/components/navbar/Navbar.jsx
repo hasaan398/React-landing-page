@@ -30,7 +30,7 @@ function Navbar() {
           {/* Desktop Actions */}
           <div className="navbar-actions">
             <button className="btn btn-login">Login</button>
-            <button className="btn btn-signup">Sign Up Now</button>
+            <button className="signup">Sign Up Now</button>
           </div>
 
           {/* Hamburger Icon (mobile only) */}

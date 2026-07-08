@@ -16,10 +16,12 @@ function Hero() {
         
         {/* Left side content */}
         <div className="hero-left">
-          <h1 className="hero-title">Teach students worldwide</h1>
+    <h1 className="hero-title">
+  <span className="highlight">Teach</span> students worldwide
+</h1>
+
           <p className="hero-subtext">
-            Attend classes and chat all at once from one app. Educate persons from
-            different places. Achieve the best goal and performance by using videos.
+          Amet nunc diam orci duis ut sit diam arcu, nec. Eleifend proin massa tincidunt viverra lectus pulvinar. Nunc ipsum est pellentesque turpis ultricies.
           </p>
           <div className="hero-actions">
             <button className="btn btn-signup">Sign Up Free</button>
@@ -39,6 +41,7 @@ function Hero() {
               <FaAtom />
             </div>
           </div>
+          
         </div>
 
         {/* Right side image */}
