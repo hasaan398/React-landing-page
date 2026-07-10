@@ -1,24 +1,29 @@
 import React, { useRef } from "react";
 import "./Allinone.css";
-import desktop from "../../assets/desktop.png"; // apni image yahan rakho
-import  Col from "../../assets/Col.png"; // apni image yahan rakho
+import desktop from "../../assets/desktop.png";
+import Col from "../../assets/Col.png";
 import { FaCheck, FaGlobeAmericas, FaGraduationCap, FaSmile, FaChevronLeft, FaChevronRight } from "react-icons/fa";
-
+import c1 from "../../assets/c1.png";
+import c2 from "../../assets/c2.png";
+import c3 from "../../assets/c3.png";
 const courses = [
   {
     tag: "Featured",
     title: "The map of mathematics",
-    text: "Egestas elit ut purus feugiat pretium nibh ipsum consequat.",
+    text: "Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.",
+    theme: "cream",
   },
   {
     tag: "Popular",
     title: "Design for how people think",
-    text: "Aliquet ut euismod condimentum elementum ultrices volutpat sit non.",
+    text: "Aliquam ut euismod condimentum elementum ultricies volutpat sit non.",
+    theme: "orange",
   },
   {
     tag: "New",
     title: "International & commercial law",
-    text: "Molestie integer nulla arcu, mauris bibendum rhoncus dui.",
+    text: "Molestie integer eu arcu, mauris bibendum rhoncus imperdiet dui.",
+    theme: "blue",
   },
 ];
 
@@ -59,49 +64,30 @@ function AllInOneSection() {
   const scrollRef = useRef(null);
 
   const scrollByCard = (direction) => {
-    if (scrollRef.current) {
-      const cardWidth = scrollRef.current.querySelector(".testimonial-card")?.offsetWidth || 300;
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -(cardWidth + 24) : cardWidth + 24,
-        behavior: "smooth",
-      });
-    }
+    const cardWidth = scrollRef.current.querySelector(".testimonial-card")?.offsetWidth || 300;
+    scrollRef.current.scrollBy({
+      left: direction === "left" ? -(cardWidth + 24) : cardWidth + 24,
+      behavior: "smooth",
+    });
   };
 
   return (
     <section className="aio-section">
-      
-      {/* --- All-in-one app block --- */}
+
       <div className="aio-block">
         <div className="aio-left">
           <h2 className="aio-title">
-            An <span className="highlight">all-in-one</span> app
-            that makes it easier
+            An <span className="highlight">all-in-one</span> app that makes it easier
           </h2>
-          <p className="aio-subtext">
-            Sit elit feugiat turpis sed integer integer accumsan turpis. Sed
-            suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum
-            ultrices amet, dui sit suspendisse.
-          </p>
+
 
           <ul className="aio-checklist">
-            <li>
-              <span className="check-icon"><FaCheck /></span>
-              Est ut in pharetra magna adipiscing ornare aliquam.
-            </li>
-            <li>
-              <span className="check-icon"><FaCheck /></span>
-              Tellus arcu sed consequat ac velit ut eu blandit.
-            </li>
-            <li>
-              <span className="check-icon"><FaCheck /></span>
-              Ullamcorper ornare in et egestas dolor orci.
-            </li>
+            <li><span className="check-icon"><FaCheck /></span> Est ut in pharetra magna adipiscing ornare aliquam.</li>
+            <li><span className="check-icon"><FaCheck /></span> Tellus arcu sed consequat ac velit ut eu blandit.</li>
+            <li><span className="check-icon"><FaCheck /></span> Ullamcorper ornare in et egestas dolor orci.</li>
           </ul>
 
-          <a href="#" className="aio-link">
-            Find more about the app &rarr;
-          </a>
+          <a href="#" className="aio-link">Find more about the app &rarr;</a>
         </div>
 
         <div className="aio-right">
@@ -112,7 +98,7 @@ function AllInOneSection() {
 
           <div className="aio-courses">
             {courses.map((course, index) => (
-              <div className="course-card" key={index}>
+              <div className={`course-card theme-${course.theme}`} key={index}>
                 <span className="course-tag">{course.tag}</span>
                 <p className="course-title">{course.title}</p>
                 <p className="course-text">{course.text}</p>
@@ -120,12 +106,9 @@ function AllInOneSection() {
               </div>
             ))}
           </div>
-
-          
         </div>
       </div>
 
-      {/* --- Meet students & teachers block --- */}
       <div className="ms-block">
         <div className="ms-left">
           <img src={Col} alt="International students and teachers" />
@@ -139,24 +122,16 @@ function AllInOneSection() {
             facilisi tellus hendrerit. Placerat ipsum ut tellus arcu,
             faucibus aenean lorem lobortis integer.
           </p>
-          <a href="#" className="ms-link">
-            Explore teachers and students &rarr;
-          </a>
+          <a href="#" className="ms-link">Explore teachers and students &rarr;</a>
         </div>
       </div>
 
-      {/* --- Stats block --- */}
       <div className="stats-block">
-        {stats.map((stat, index) => (
-          <div className="stat-item" key={index}>
-            <div className="stat-icon">{stat.icon}</div>
-            <h3 className="stat-value">{stat.value}</h3>
-            <p className="stat-label">{stat.label}</p>
-          </div>
-        ))}
+        <img src={c1} alt="Stat 1" className="stat-icon" />
+        <img src={c2} alt="Stat 2" className="stat-icon" />
+        <img src={c3} alt="Stat 3" className="stat-icon" /> 
       </div>
 
-      {/* --- Testimonials block --- */}
       <div className="testimonials-block">
         <div className="testimonials-header">
           <h2 className="testimonials-title">What everyone says</h2>
@@ -181,6 +156,7 @@ function AllInOneSection() {
           ))}
         </div>
       </div>
+
     </section>
   );
 }

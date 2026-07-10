@@ -1,3 +1,21 @@
-body{
-font-family: "Roboto", sans-serif;
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.app-content {
+  padding-top: 84px; /* matches navbar's actual rendered height */
+  overflow-x: hidden;
+  width: 100%;
 }

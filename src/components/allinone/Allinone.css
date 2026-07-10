@@ -3,12 +3,10 @@
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
 }
-
 /* ============ ALL-IN-ONE BLOCK ============ */
 .aio-block {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 80px 20px 60px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -16,23 +14,22 @@
   flex-wrap: wrap;
   overflow: hidden;
 }
-
 .aio-left {
   flex: 1 1 300px;
   max-width: 100%;
   min-width: 0;
+  margin-left: 50px;
+  margin-top: 20px;
 }
-
 .aio-title {
   font-family: "Roboto", sans-serif;
-  font-size: 40px;
+  font-size: 56px;
   font-weight: 800;
   letter-spacing: 0%;
   color: #111827;
   line-height: 1.25;
   margin-bottom: 20px;
 }
-
 .aio-subtext {
   font-size: 15px;
   color: #6b7280;
@@ -40,13 +37,11 @@
   margin-bottom: 28px;
   max-width: 420px;
 }
-
 .aio-checklist {
   list-style: none;
   padding: 0;
   margin: 0 0 28px 0;
 }
-
 .aio-checklist li {
   display: flex;
   align-items: flex-start;
@@ -57,7 +52,6 @@
   line-height: 1.6;
   margin-bottom: 10px;
 }
-
 .check-icon {
   width: 20px;
   height: 20px;
@@ -70,18 +64,15 @@
   margin-top: 2px;
   flex-shrink: 0;
 }
-
 .aio-link {
   color: #2563eb;
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
 }
-
 .aio-link:hover {
   text-decoration: underline;
 }
-
 /* Right side */
 .aio-right {
   flex: 1 1 320px;
@@ -91,7 +82,6 @@
   padding-top: 20px;
   padding-left: 50px;
 }
-
 /* Single oval blob on the left side, matching Figma exactly */
 .aio-blob {
     position: absolute;
@@ -103,7 +93,6 @@
     border-radius: 40%;
     z-index: 0;
 }
-
 .aio-thumbnail {
   border-radius: 16px;
   overflow: hidden;
@@ -112,13 +101,11 @@
   position: relative;
   z-index: 1;
 }
-
 .aio-thumbnail img {
   width: 100%;
   height: auto;
   display: block;
 }
-
 .aio-courses {
   display: flex;
   gap: 16px;
@@ -127,60 +114,72 @@
   margin-top: -100px;
   flex-wrap: nowrap;
 }
-
 .course-card {
-  background: #fffaf5;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  flex: 1;
-  min-width: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  padding: 28px 24px;
+  flex: 1 1 0;
+  min-width: 260px;
+}
+
+/* Card 1: Featured - purple tag */
+.theme-cream .course-tag {
+  color: #7c3aed;
+  background: #f3e8ff;
+}
+
+/* Card 2: Popular - blue tag */
+.theme-orange .course-tag {
+  color: #2563eb;
+  background: #dbeafe;
+}
+
+/* Card 3: New - green tag */
+.theme-blue .course-tag {
+  color: #16a34a;
+  background: #dcfce7;
 }
 
 .course-tag {
   display: inline-block;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
-  color: #2563eb;
-  background: #eff6ff;
-  padding: 3px 7px;
-  border-radius: 4px;
-  margin-bottom: 8px;
+  padding: 4px 10px;
+  border-radius: 5px;
+  margin-bottom: 14px;
   white-space: nowrap;
 }
-
 .course-title {
-  font-size: 13px;
+  font-size: 20px;
   font-weight: 700;
   color: #111827;
-  margin-bottom: 6px;
-  line-height: 1.4;
+  margin-bottom: 12px;
+  line-height: 1.3;
 }
-
 .course-text {
-  font-size: 11px;
-  color: #9ca3af;
-  line-height: 1.5;
-  margin-bottom: 14px;
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
-
 .course-btn {
   width: 100%;
-  padding: 7px;
-  border: none;
-  border-radius: 6px;
-  background: #2563eb;
-  color: #fff;
-  font-size: 11px;
-  font-weight: 600;
+  padding: 12px;
+  border: 2px solid #2563eb;
+  border-radius: 8px;
+  background: #fff;
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
+  transition: all 0.2s ease;
 }
-
 .course-btn:hover {
-  background: #1d4ed8;
+  background: #2563eb;
+  color: #fff;
 }
-
 /* ============ MEET STUDENTS BLOCK ============ */
 .ms-block {
   max-width: 1200px;
@@ -193,25 +192,22 @@
   flex-wrap: wrap;
   overflow: hidden;
 }
-
 .ms-left {
   flex: 1 1 280px;
   max-width: 420px;
   min-width: 0;
+  width: 100%;
 }
-
 .ms-left img {
   width: 100%;
   height: auto;
   display: block;
 }
-
 .ms-right {
   flex: 1 1 300px;
   max-width: 100%;
   min-width: 0;
 }
-
 .ms-title {
   font-size: 56px;
   font-weight: 800;
@@ -219,7 +215,6 @@
   line-height: 110.00000000000001%;
   margin-bottom: 20px;
 }
-
 .ms-subtext {
   font-size: 20px;
   color: #6b7280;
@@ -227,76 +222,67 @@
   margin-bottom: 24px;
   max-width: 600px;
 }
-
 .ms-link {
   color: #2563eb;
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
 }
-
 .ms-link:hover {
   text-decoration: underline;
 }
-
 /* ============ STATS BLOCK ============ */
 .stats-block {
   background: #0f172a;
   padding: 100px;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 150px;
   flex-wrap: wrap;
 }
-
 .stat-item {
   text-align: center;
   color: #fff;
 }
-
 .stat-icon {
   font-size: 26px;
   color: #fbbf24;
   margin-bottom: 10px;
+  max-width: 100%;
+  height: auto;
 }
-
 .stat-value {
   font-size: 32px;
   font-weight: 700;
   color: #fbbf24;
   margin-bottom: 6px;
 }
-
 .stat-label {
   font-size: 14px;
   color: #cbd5e1;
 }
-
 /* ============ TESTIMONIALS BLOCK ============ */
 .testimonials-block {
   max-width: 1200px;
   margin: 0 auto;
   padding: 80px 20px;
 }
-
 .testimonials-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
 }
-
 .testimonials-title {
   font-size: 56px;
   font-weight: 800;
   color: #111827;
 }
-
 .testimonials-arrows {
   display: flex;
   gap: 12px;
 }
-
 .testimonials-arrows span {
   width: 36px;
   height: 36px;
@@ -310,13 +296,11 @@
   cursor: pointer;
   transition: all 0.2s ease;
 }
-
 .testimonials-arrows span:hover {
   background: #ff6b00;
   border-color: #ff6b00;
   color: #fff;
 }
-
 .testimonials-grid {
   display: flex;
   gap: 24px;
@@ -326,11 +310,9 @@
   -ms-overflow-style: none;
   padding-bottom: 4px;
 }
-
 .testimonials-grid::-webkit-scrollbar {
   display: none;
 }
-
 .testimonial-card {
   flex: 0 0 calc(25% - 18px);
   min-width: 260px;
@@ -338,20 +320,17 @@
   border-radius: 12px;
   padding: 24px;
 }
-
 .testimonial-text {
   font-size: 14px;
   color: #4b5563;
   line-height: 1.7;
   margin-bottom: 20px;
 }
-
 .testimonial-author {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-
 .author-avatar {
   width: 40px;
   height: 40px;
@@ -359,30 +338,53 @@
   object-fit: cover;
   flex-shrink: 0;
 }
-
 .author-name {
   font-size: 14px;
   font-weight: 600;
   color: #111827;
 }
-
 .author-role {
   font-size: 12px;
   color: #9ca3af;
 }
 
 /* ============ RESPONSIVE ============ */
-@media (max-width: 992px) {
-  .aio-block,
-  .ms-block {
-    flex-direction: column;
+
+/* Large tablet / small desktop */
+@media (max-width: 1200px) {
+  .aio-title {
+    font-size: 46px;
   }
 
+  .aio-left {
+    margin-left: 24px;
+  }
+
+  .ms-title,
+  .testimonials-title {
+    font-size: 42px;
+  }
+
+  .ms-subtext {
+    font-size: 17px;
+  }
+
+  .stats-block {
+    padding: 70px 40px;
+    gap: 80px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .aio-block,
+ 
   .aio-left,
   .aio-right,
   .ms-left,
   .ms-right {
     width: 100%;
+    max-width: 100%;
   }
 
   .aio-subtext,
@@ -390,69 +392,97 @@
   .ms-subtext {
     max-width: 100%;
   }
-
+  .aio-checklist li {
+    justify-content: center;
+  }
   .aio-right {
     padding-left: 20px;
   }
-
   .aio-thumbnail {
     margin-bottom: 20px;
   }
-
   .aio-courses {
     padding: 0;
+    flex-direction: column;
+    margin-top: 20px;
   }
-
   .ms-left {
-    max-width: 320px;
-    margin: 0 auto;
-  }
+    max-width: 420px;
 
-  .ms-block {
-    text-align: center;
   }
-
+  
   .ms-subtext {
     margin-left: auto;
     margin-right: auto;
   }
+  .ms-title,
+  .testimonials-title {
+    font-size: 34px;
+  }
 
   .stats-block {
     gap: 50px;
-  }
-
-  .testimonial-card {
-    flex: 0 0 calc(50% - 12px);
+    padding: 50px 24px;
   }
 }
 
+/* Mobile */
 @media (max-width: 576px) {
   .aio-title,
-  .ms-title {
+  .ms-title,
+  .testimonials-title {
     font-size: 26px;
   }
-
+  .aio-block {
+    padding: 0 16px 40px;
+  }
   .aio-courses {
     flex-direction: column;
   }
-
   .aio-blob {
     display: none;
   }
-
-  .stats-block {
-    gap: 30px;
+  .aio-right {
+    padding-left: 0;
+  }
+  .ms-block {
+    padding: 40px 16px 50px;
+  }
+  .ms-subtext {
+    font-size: 15px;
   }
 
+  .stats-block {
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px 24px;
+    width: 100%;
+  }
+
+  .stat-item {
+    width: 100%;
+  }
+
+
+
+  .stat-value {
+    font-size: 30px;
+  }
+
+  .stat-label {
+    font-size: 15px;
+  }
+
+  .testimonials-block {
+    padding: 50px 16px;
+  }
   .testimonials-header {
     flex-direction: row;
     align-items: center;
   }
-
   .testimonials-arrows {
     display: none;
   }
-
   .testimonial-card {
     flex: 0 0 85%;
   }

@@ -1,13 +1,4 @@
 .navbar {
-  width: 100%;
-  background: #ffffff;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-font-family: "Roboto", sans-serif;
-  overflow: visible;
-}
-.navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -15,10 +6,9 @@ font-family: "Roboto", sans-serif;
   width: 100%;
   z-index: 100;
   background: #ffffff;
+  font-family: "Roboto", sans-serif;
 }
-.app-content { /* or body > main wrapper */
-  padding-top: 76px; /* set to your navbar height */
-}
+
 html, body {
   overflow-x: hidden;
   max-width: 100%;
@@ -27,9 +17,8 @@ html, body {
 .nav-left {
   display: flex;
   align-items: center;
-
 }
-.nav-left .navbar-links{
+.nav-left .navbar-links {
   margin-left: 60px;
 }
 .nav-right {
@@ -55,12 +44,11 @@ html, body {
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 60px;
+  gap: 32px;
   margin: 0;
   padding: 0;
   letter-spacing: 0.5px;
   line-height: 24px;
-  gap: 12px 8px 12px 8px;
 }
 
 .navbar-links li a {
@@ -78,6 +66,7 @@ html, body {
 
 .navbar-actions {
   display: flex;
+  align-items: center;
   gap: 18px;
 }
 
@@ -104,20 +93,22 @@ html, body {
 }
 
 /* Sign Up button */
-.signup{
+.signup {
   background-color: #ffffff;
   border: 2px solid black;
   color: #000000;
   font-weight: 500;
   font-size: 18px;
-  padding-left: 18px;
-  padding-right: 16px;
+  padding: 10px 16px;
   border-radius: 5px;
   line-height: 24px;
+  cursor: pointer;
 }
 
 .signup:hover {
   background: #ff6b00;
+  color: #fff;
+  border-color: #ff6b00;
 }
 
 /* ============ HAMBURGER BUTTON ============ */
@@ -213,7 +204,6 @@ html, body {
   flex-direction: column;
   gap: 12px;
   margin-top: 30px;
-  
 }
 
 .mobile-actions .btn {

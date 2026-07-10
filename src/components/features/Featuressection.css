@@ -47,7 +47,6 @@
   color: #6b7280;
   line-height: 180%;
   margin-bottom: 24px;
- 
 }
 
 .features-link {
@@ -78,21 +77,22 @@
 .join-block {
   position: relative;
   background: #ffc93c;
-  padding: 90px 20px;
+  padding: 100px 20px;
   text-align: center;
   overflow: hidden;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 480px;
 }
 
 .join-content {
   position: relative;
   z-index: 2;
-
+ 
   margin: 0 auto;
 }
 
 .join-title {
-  font-size: 56px;
+  font-size: 34px;
   font-weight: 800;
   color: #111827;
   margin-bottom: 16px;
@@ -121,7 +121,7 @@
   background: #e65c00;
 }
 
-/* Decorative floating avatar icons */
+/* Decorative floating avatars - positioned via inline style top/left percentages from JSX */
 .join-icons {
   position: absolute;
   inset: 0;
@@ -130,39 +130,21 @@
 
 .j-icon {
   position: absolute;
-  width: 44px;
-  height: 44px;
   border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  border: 3px solid #fff;
-}
-
-.j-icon img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  display: block;
+  border: 3px solid #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translate(-50%, -50%);
 }
-
-.i1 { top: 12%; left: 8%; }
-.i2 { top: 20%; left: 42%; }
-.i3 { top: 15%; right: 10%; }
-.i4 { bottom: 18%; left: 12%; }
-.i5 { bottom: 22%; right: 15%; }
-.i6 { bottom: 10%; left: 48%; }
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 992px) {
-  .features-container {
-    flex-direction: column;
-    text-align: center;
-  }
+
 
   .features-subtext {
     max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+
+
   }
 
   .features-right {
@@ -185,16 +167,22 @@
     max-width: 320px;
   }
 
-  .j-icon {
-    width: 34px;
-    height: 34px;
-  }
-
   .join-block {
     padding: 60px 16px;
+    min-height: 340px;
   }
 
-  .join-icons {
-    display: none;
+  .j-icon {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+}
+
+@media (max-width: 400px) {
+  .join-block {
+    min-height: 280px;
+  }
+
+  .j-icon {
+    transform: translate(-50%, -50%) scale(0.5);
   }
 }

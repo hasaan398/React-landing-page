@@ -1,23 +1,30 @@
 import React from "react";
 import "./Tool.css";
-import {
-  FaImage,
-  FaFire,
-  FaCamera,
-  FaInfinity,
-  FaWifi,
-  FaChartLine,
-  FaCloud,
-} from "react-icons/fa";
-import { SiAdobephotoshop } from "react-icons/si";
+import vector from "../../assets/vector.png"; 
+import blob from "../../assets/blob.png";
+import i1 from "../../assets/i1.png";
+import i2 from "../../assets/i2.png";
+import i3 from "../../assets/i3.png";
+import i4 from "../../assets/i4.png";
+import i5 from "../../assets/i5.png";
+import i6 from "../../assets/i6.png";
+import i7 from "../../assets/i7.png";
+import i8 from "../../assets/i8.png";
+import i9 from "../../assets/i9.png";
 
 function Tools() {
   return (
     <section className="tools">
+      <div className="blob">
+      {/* Decorative background blobs + dots, positioned behind content */}
+      <img src={vector} alt="" className="tools-decoration" />
+ <img src={blob} alt="" className="decoration" />
+ </div>
       <div className="tools-container">
         <h2 className="tools-title">
           All the <span className="highlight">tools</span> that you need
         </h2>
+
         <p className="tools-subtext">
           Sit elit feugiat turpis sed integer integer accumsan turpis. Sed suspendisse nec lorem mauris.
           <br />
@@ -25,8 +32,6 @@ function Tools() {
         </p>
 
         <div className="tools-mockup-wrapper">
-          <div className="tools-blob"></div>
-
           <div className="browser-mockup">
             <div className="browser-topbar">
               <div className="browser-dots">
@@ -46,28 +51,31 @@ function Tools() {
 
         <div className="tools-icons">
           <div className="tool-icon icon-green">
-            <FaImage />
+            <img src={i1} alt="Tool 1" />
           </div>
           <div className="tool-icon icon-orange">
-            <SiAdobephotoshop />
+            <img src={i2} alt="Tool 2" />
           </div>
           <div className="tool-icon icon-blue">
-            <FaFire />
+            <img src={i3} alt="Tool 3" />
           </div>
           <div className="tool-icon icon-dark">
-            <FaCamera />
+            <img src={i4} alt="Tool 4" />
           </div>
           <div className="tool-icon icon-teal">
-            <FaInfinity />
+            <img src={i5} alt="Tool 5" />
           </div>
           <div className="tool-icon icon-lightblue">
-            <FaWifi />
+            <img src={i6} alt="Tool 6" />
           </div>
           <div className="tool-icon icon-red">
-            <FaChartLine />
+            <img src={i7} alt="Tool 7" />
           </div>
           <div className="tool-icon icon-gradient">
-            <FaCloud />
+            <img src={i8} alt="Tool 8" />
+          </div>
+             <div className="tool-icon icon-gradient">
+            <img src={i9} alt="Tool 9" />
           </div>
         </div>
       </div>
