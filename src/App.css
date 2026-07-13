@@ -15,7 +15,7 @@ body {
 }
 
 .app-content {
-  padding-top: 84px; /* matches navbar's actual rendered height */
+ 
   overflow-x: hidden;
   width: 100%;
 }
