@@ -177,7 +177,15 @@
     transform: translate(-50%, -50%) scale(0.7);
   }
 }
-
+@media (max-width: 500px) {
+  .icon-u2,
+  .icon-u6,
+  .icon-u3,
+  .icon-u11,
+  .icon-u12 {
+    display: none !important;
+  }
+}
 @media (max-width: 400px) {
   .join-block {
     min-height: 280px;

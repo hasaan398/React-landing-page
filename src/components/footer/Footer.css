@@ -25,7 +25,9 @@
   display: flex;
   flex: 1;
   justify-content: space-between;
-  gap: 24px;
+
+  
+
   flex-wrap: wrap;
 }
 
@@ -124,9 +126,6 @@
     gap: 32px 20px;
   }
 
-  .footer-col {
-    min-width: 45%;
-  }
 
   .footer-bottom {
     flex-direction: column;
@@ -135,15 +134,25 @@
 }
 
 @media (max-width: 480px) {
-  .footer-col {
-    min-width: 100%;
-  }
 
-  .footer-top {
-    padding: 40px 16px 30px;
-  }
+
+
 
   .footer-bottom-links {
+    width: 100%;
+
+  
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-bottom-links a {
+    flex: 0 0 calc(33.333% - 12px);
+    text-align: center;
+  }
+
+  .footer-divider {
+    display: none;
   }
 }

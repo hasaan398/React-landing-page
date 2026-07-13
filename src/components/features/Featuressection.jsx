@@ -18,18 +18,18 @@ import u12 from "../../assets/u12.png";
 
 // Har avatar ki position % mein (top/left) + size, Figma design ke hisaab se
 const avatars = [
-  { src: u1, top: "70%", left: "15%", size: 100 },
-  { src: u2, top: "60%", left: "30%", size: 38 },
-  { src: u3, top: "85%", left: "30%", size: 30 },
-  { src: u4,  top: "95%", left: "5%", size: 35 },
-  { src: u5, top: "60%", left: "1%", size: 40 },
-  { src: u6, top: "25%", left: "10  %", size: 34  },
-  { src: u7, top: "10%", left: "30%", size: 46  },
-  { src: u8, top: "20%", left: "95%", size: 80 },
-  { src: u9, top: "60%", left: "98%", size: 100},
-  { src: u10, top: "80%", left: "90%", size: 42 },
-  { src: u11, top: "75%", left: "70%", size: 50  },
-  { src: u12, top: "50%", left: "80%", size: 44 },
+  { src: u1, name: "u1", top: "70%", left: "15%", size: 100 },
+  { src: u2, name: "u2", top: "60%", left: "30%", size: 38 },
+  { src: u3, name: "u3", top: "85%", left: "30%", size: 30 },
+  { src: u4, name: "u4", top: "95%", left: "5%", size: 35 },
+  { src: u5, name: "u5", top: "60%", left: "1%", size: 40 },
+  { src: u6, name: "u6", top: "25%", left: "10%", size: 34 },
+  { src: u7, name: "u7", top: "10%", left: "30%", size: 46 },
+  { src: u8, name: "u8", top: "20%", left: "95%", size: 80 },
+  { src: u9, name: "u9", top: "60%", left: "98%", size: 100 },
+  { src: u10, name: "u10", top: "80%", left: "90%", size: 42 },
+  { src: u11, name: "u11", top: "75%", left: "70%", size: 50 },
+  { src: u12, name: "u12", top: "50%", left: "80%", size: 44 },
 ];
 
 function FeaturesSection() {
@@ -67,7 +67,7 @@ function FeaturesSection() {
               key={i}
               src={a.src}
               alt=""
-              className="j-icon"
+              className={`j-icon icon-${a.name}`}
               style={{
                 top: a.top,
                 left: a.left,

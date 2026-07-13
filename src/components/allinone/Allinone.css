@@ -36,7 +36,7 @@
 }
 .aio-checklist {
   list-style: none;
-  padding: 15px;
+
 
 }
 
@@ -393,6 +393,22 @@
 }
 /* ============ RESPONSIVE ============ */
 
+/* Large desktop / smaller wide screens */
+@media (max-width: 1221px) {
+  .stats-block {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 50px 24px;
+  }
+  .stat-icon {
+    width: 100%;
+    max-width: 320px;
+    flex: 0 0 auto;
+  }
+}
+
 /* Large tablet / small desktop */
 @media (max-width: 1200px) {
   .aio-title {
@@ -433,9 +449,7 @@
   .ms-subtext {
     max-width: 100%;
   }
-  .aio-checklist li {
-    justify-content: center;
-  }
+
   .aio-right {
     padding-left: 20px;
   }
@@ -478,15 +492,14 @@
   }
 
   .stats-block {
-    padding: 50px 24px;
     gap: 30px;
+    padding: 50px 24px;
   }
   .stat-icon {
-    max-width: 220px;
+
     flex: 1 1 180px;
   }
 }
-
 /* Mobile - cards remain responsive and selected cards are larger */
 @media (max-width: 640px) {
   .aio-title,
@@ -596,5 +609,20 @@
   }
   .testimonial-card {
     flex: 0 0 85%;
+  }
+}
+
+@media (max-width: 767px) {
+  .stats-block {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 40px 16px;
+  }
+  .stat-icon {
+    flex: 0 0 auto;
+    max-width: 320px;
+    width: 100%;
   }
 }
