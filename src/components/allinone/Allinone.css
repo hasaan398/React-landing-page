@@ -122,10 +122,9 @@
   flex: 1 1 0;
   min-width: 150px;
   transition: box-shadow 0.25s ease;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.308);
 }
-.course-card:hover {
-  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.12);
-}
+
 
 /* Card 1: Featured - purple tag */
 .theme-cream .course-tag {
