@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./Allinone.css";
 import desktop from "../../assets/desktop.png";
 import Col from "../../assets/Col.png";
@@ -58,9 +58,22 @@ const testimonials = [
     role: "Web Developer",
     avatar: "https://randomuser.me/api/portraits/men/76.jpg",
   },
+    {
+    text: "World adipiscing purus consectetur donec a. Sit lorem tempor nunc, ultricies dolor. Nunc consectetur velit id porttitor nibh.",
+    name: "Kelly Edwards",
+    role: "Web Developer",
+    avatar: "https://randomuser.me/api/portraits/men/76.jpg",
+  },
+    {
+    text: "World adipiscing purus consectetur donec a. Sit lorem tempor nunc, ultricies dolor. Nunc consectetur velit id porttitor nibh.",
+    name: "Kelly Edwards",
+    role: "Web Developer",
+    avatar: "https://randomuser.me/api/portraits/men/76.jpg",
+  },
 ];
 
 function AllInOneSection() {
+  const [selectedTestimonial, setSelectedTestimonial] = useState(0);
   const scrollRef = useRef(null);
 
   const scrollByCard = (direction) => {
@@ -81,11 +94,11 @@ function AllInOneSection() {
           </h2>
 
 
-          <ul className="aio-checklist">
+          <div className="aio-checklist">
             <li><span className="check-icon"><FaCheck /></span> Est ut in pharetra magna adipiscing ornare aliquam.</li>
             <li><span className="check-icon"><FaCheck /></span> Tellus arcu sed consequat ac velit ut eu blandit.</li>
             <li><span className="check-icon"><FaCheck /></span> Ullamcorper ornare in et egestas dolor orci.</li>
-          </ul>
+          </div>
 
           <a href="#" className="aio-link">Find more about the app &rarr;</a>
         </div>
@@ -143,7 +156,11 @@ function AllInOneSection() {
 
         <div className="testimonials-grid" ref={scrollRef}>
           {testimonials.map((t, index) => (
-            <div className="testimonial-card" key={index}>
+            <div
+              className={`testimonial-card ${selectedTestimonial === index ? "active" : ""}`}
+              key={index}
+              onClick={() => setSelectedTestimonial(index)}
+            >
               <p className="testimonial-text">{t.text}</p>
               <div className="testimonial-author">
                 <img className="author-avatar" src={t.avatar} alt={t.name} />
