@@ -21,7 +21,7 @@ function Navbar() {
           <ul className="navbar-links">
             <li><a href="#features">Products</a></li>
             <li><a href="#pricing">Solution</a></li>
-            <li><a href="#demo">pricing</a></li>
+            <li><a href="#demo">Pricing</a></li>
             <li><a href="#about">Resources</a></li>
           </ul>
         </div>

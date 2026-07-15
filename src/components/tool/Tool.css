@@ -198,16 +198,10 @@
   /* Icons row */
   .tools-icons {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 70px;
-    flex-wrap: nowrap;
-    z-index: 5;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 20px 0;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x proximity;
+justify-content: flex-start;
+            gap: 70px;
+            padding: 50px;
+            overflow-x: auto;
   }
   .tool-icon :hover {
     border: 2px solid orangered;

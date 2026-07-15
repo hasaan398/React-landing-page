@@ -394,7 +394,7 @@
 /* ============ RESPONSIVE ============ */
 
 /* Large desktop / smaller wide screens */
-@media (max-width: 1221px) {
+@media (max-width: 700px) {
   .stats-block {
     flex-direction: column;
     align-items: center;
@@ -434,9 +434,19 @@
   }
 
   .stat-icon {
-    max-width: 260px;
+    max-width: 250px;
+  }
+  .stats-block{
+    flex-wrap: nowrap;
   }
 }
+
+  @media (max-width: 1221px) {
+      .stats-block{
+    flex-wrap: nowrap;
+ 
+  }
+  }
 
 /* Tablet */
 @media (max-width: 992px) {
@@ -492,16 +502,13 @@
   }
 
   .stats-block {
-    gap: 30px;
-    padding: 50px 24px;
-  }
-  .stat-icon {
 
-    flex: 1 1 180px;
+    flex-wrap: nowrap;
   }
+
 }
 /* Mobile - cards remain responsive and selected cards are larger */
-@media (max-width: 640px) {
+@media (max-width: 550px) {
   .aio-title,
   .ms-title,
   .testimonials-title {
